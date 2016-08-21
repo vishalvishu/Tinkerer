@@ -21,7 +21,7 @@ public class RandomNumberGenerator {
             1.) Math.random() is a static function which generates a value between 0 and 1.
             2.) If the obtained number is multiplied by a number say 15, we can generate random numbers between 0 and 15.
             3.) Now we want to add generate random numbers between 6 and 15..So first we find the difference between
-                maximum and minumum and multiply with it and add the minimum number.
+                maximum and miniumum and multiply with it and add the minimum number.
         */
         String name1 = name + " " + Integer.toString((int)Math.floor(Math.random()*10 + 6));
 
