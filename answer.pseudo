@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 /**
- * Created by Developer on 8/21/2016.
+ * Created by Vishal on 8/21/2016.
  */
 public class RandomNumberGenerator {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        if(scanner.hasNextLine()){
+        if(scanner.hasNextLine()){ // Validation to check whether the line is empty.
             String name = scanner.nextLine();
             System.out.println(RandomName("Vishal"));
         }
@@ -15,7 +15,14 @@ public class RandomNumberGenerator {
     }
 
     public static String RandomName(String name){
-
+        final int MINIMIMUM = 6;
+        final int MAXIMUM = 15;
+        /*
+            1.) Math.random() is a static function which generates a value between 0 and 1.
+            2.) If the obtained number is multiplied by a number say 15, we can generate random numbers between 0 and 15.
+            3.) Now we want to add generate random numbers between 6 and 15..So first we find the difference between
+                maximum and minumum and multiply with it and add the minimum number.
+        */
         String name1 = name + " " + Integer.toString((int)Math.floor(Math.random()*10 + 6));
 
         return name1;
